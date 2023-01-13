@@ -17,7 +17,7 @@ public:
 signals:
     void back();
 
-private:
+public:
     Ui::MyInfo *ui;
 };
 

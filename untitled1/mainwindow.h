@@ -22,9 +22,18 @@ public:
 private:
     void initMenu();
     void readWordFile();
+    void setOptions();
+    void setWords();
+    int getCurrentOption();
+    int getUserInput();
+
 
 public slots:
     void userClicked();
+    void userClicked_A();
+    void userClicked_B();
+    void userClicked_C();
+    void userClicked_D();
 
 private:
     Ui::MainWindow *ui;
@@ -32,5 +41,9 @@ private:
     std::fstream fin;
     QVector<QVector<QString>> ch;
     QVector<QVector<QString>> en;
+    QVector<int> options;
+
+    int cur;
+    int userInput;
 };
 #endif // MAINWINDOW_H
